@@ -1,0 +1,17 @@
+apiVersion: api.yashwant.online/v1
+kind: Scaler
+metadata:
+  # labels:
+  #   app.kubernetes.io/name: scaler
+  #   app.kubernetes.io/instance: scaler-sample
+  #   app.kubernetes.io/part-of: custom-operator-1
+  #   app.kubernetes.io/managed-by: kustomize
+  #   app.kubernetes.io/created-by: custom-operator-1
+  name: scaler-sample
+spec:
+  start: 5
+  end: 12
+  replicas: 5
+  deployments:
+    - name: "nginx"
+      namespace: "default"
